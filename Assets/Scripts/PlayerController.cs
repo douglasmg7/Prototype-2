@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float xRange;
     public GameObject projectilePrefab;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (ReachRightHorizontalRange())
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
-
     }
 
     bool ReachRightHorizontalRange()
